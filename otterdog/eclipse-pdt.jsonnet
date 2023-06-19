@@ -13,8 +13,6 @@ orgs.newOrg('eclipse-pdt') {
     packages_containers_internal: false,
     packages_containers_public: false,
     readers_can_create_discussions: true,
-    security_managers+: [
-    ],
     web_commit_signoff_required: false,
   },
   _repositories+:: [
@@ -46,8 +44,7 @@ orgs.newOrg('eclipse-pdt') {
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
-          required_status_checks+: [
-          ],
+          required_status_checks+: [],
           requires_approving_reviews: false,
           requires_linear_history: true,
           requires_status_checks: false,
@@ -55,8 +52,7 @@ orgs.newOrg('eclipse-pdt') {
         },
         orgs.newBranchProtectionRule('stable-*') {
           required_approving_review_count: null,
-          required_status_checks+: [
-          ],
+          required_status_checks+: [],
           requires_approving_reviews: false,
           requires_linear_history: true,
           requires_status_checks: false,
