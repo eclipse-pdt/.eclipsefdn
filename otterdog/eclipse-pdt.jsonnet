@@ -41,10 +41,23 @@ orgs.newOrg('eclipse-pdt') {
         "xdebug"
       ],
       web_commit_signoff_required: false,
+      webhooks: [
+        orgs.newRepoWebhook('https://ci.eclipse.org/pdt/github-webhook/') {
+          events+: [
+            "push"
+          ],
+        },
+        orgs.newRepoWebhook('https://ci.eclipse.org/pdt/ghprbhook/') {
+          events+: [
+            "issue_comment",
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
-          required_status_checks+: [],
           requires_approving_reviews: false,
           requires_linear_history: true,
           requires_status_checks: false,
@@ -52,7 +65,6 @@ orgs.newOrg('eclipse-pdt') {
         },
         orgs.newBranchProtectionRule('stable-*') {
           required_approving_review_count: null,
-          required_status_checks+: [],
           requires_approving_reviews: false,
           requires_linear_history: true,
           requires_status_checks: false,
