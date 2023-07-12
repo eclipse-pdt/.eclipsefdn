@@ -55,6 +55,11 @@ orgs.newOrg('eclipse-pdt') {
           ],
         },
       ],
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "********",
+        },
+      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
