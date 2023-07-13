@@ -25,6 +25,7 @@ orgs.newOrg('eclipse-pdt') {
       allow_merge_commit: false,
       allow_update_branch: false,
       default_branch: "master",
+      dependabot_security_updates_enabled: true,
       description: "PHP Development Tools project (PDT)",
       homepage: "https://eclipse.org/pdt",
       topics+: [
