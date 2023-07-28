@@ -63,15 +63,15 @@ orgs.newOrg('eclipse-pdt') {
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
-          requires_approving_reviews: false,
           requires_linear_history: true,
+          requires_pull_request: false,
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('stable-*') {
           required_approving_review_count: null,
-          requires_approving_reviews: false,
           requires_linear_history: true,
+          requires_pull_request: false,
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
