@@ -80,8 +80,6 @@ orgs.newOrg('eclipse-pdt') {
     orgs.newRepo('pdt-website') {
       allow_update_branch: false,
       default_branch: "master",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
   ],
