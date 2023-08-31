@@ -6,8 +6,6 @@ orgs.newOrg('eclipse-pdt') {
     default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
-    members_can_change_repo_visibility: true,
-    members_can_delete_repositories: true,
     name: "Eclipse PDT",
     packages_containers_internal: false,
     packages_containers_public: false,
