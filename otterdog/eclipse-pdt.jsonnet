@@ -17,14 +17,16 @@ orgs.newOrg('eclipse-pdt') {
   },
   _repositories+:: [
     orgs.newRepo('.github') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('pdt') {
-      allow_merge_commit: false,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "PHP Development Tools project (PDT)",
       homepage: "https://eclipse.org/pdt",
@@ -79,8 +81,10 @@ orgs.newOrg('eclipse-pdt') {
       ],
     },
     orgs.newRepo('pdt-website') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
   ],
