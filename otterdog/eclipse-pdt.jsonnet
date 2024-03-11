@@ -18,9 +18,6 @@ orgs.newOrg('eclipse-pdt') {
       default_branch: "master",
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('pdt') {
       allow_update_branch: false,
@@ -43,9 +40,6 @@ orgs.newOrg('eclipse-pdt') {
         "xdebug"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       webhooks: [
         orgs.newRepoWebhook('https://ci.eclipse.org/pdt/github-webhook/') {
           events+: [
