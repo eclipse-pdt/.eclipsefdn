@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-pdt') {
+orgs.newOrg('tools.pdt', 'eclipse-pdt') {
   settings+: {
     description: "",
     name: "Eclipse PDT",
