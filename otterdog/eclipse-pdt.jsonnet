@@ -85,6 +85,14 @@ orgs.newOrg('tools.pdt', 'eclipse-pdt') {
       default_branch: "master",
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "master"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
   ],
 }
