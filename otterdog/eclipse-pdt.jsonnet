@@ -9,6 +9,11 @@ orgs.newOrg('tools.pdt', 'eclipse-pdt') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('GITLAB_API_TOKEN') {
+      value: "pass:bots/tools.pdt/gitlab.eclipse.org/api-token",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
